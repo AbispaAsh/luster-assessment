@@ -10,7 +10,7 @@ const DB = process.env.DATABASE.replace(
     process.env.DATABASE_PASSWORD
 );
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8008;
 
 mongoose.set("strictQuery", false);
 mongoose.connect(DB)
