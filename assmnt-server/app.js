@@ -26,7 +26,7 @@ app.post('/api', async(req, res) => {
 
         //insert pitch into database
         const pitch = await Pitch.create({pitch_deck_text: req.body.text, pitch_deck_summary: summary, _id: id})
-        res.status(201).json(pitch);
+        res.status(201).json({summary: summary});
         
     } catch (error) {
         console.log(error.message);
