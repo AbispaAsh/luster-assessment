@@ -36,3 +36,5 @@ Install Dependencies
 Then start the application
 
 ### `npm start`
+
+Have included environment files for convenience
