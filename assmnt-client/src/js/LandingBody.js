@@ -14,7 +14,8 @@ function LandingBody() {
     const handleGenerateSummary = async (e) => {
         try {
             setSummaryState(false);
-            const response = await axios.post(`${process.env.API_URL||'http://127.0.0.1:8008/api'}`, {text: pitchDeckText});
+            console.log(process.env.API_URL)
+            const response = await axios.post(`${process.env.REACT_APP_API_URL||'http://127.0.0.1:8008/api'}`, {text: pitchDeckText});
             setPitchDeckSummary(response.data.summary);
             setSummaryState(true);
             e.preventDefault();
